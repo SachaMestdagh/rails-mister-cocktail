@@ -1,0 +1,7 @@
+<h1> Edit this cocktail </h1>
+
+<%= render 'form', cocktail: @cocktail %>
+
+<%= link_to 'Show', @cocktail, :class => "btn" %>
+<%= link_to 'Back', cocktails_path, :class => "btn" %>
+<%= link_to "Delete a cocktail", cocktail_path(@cocktail), method: :delete, :class => "btn"  %>

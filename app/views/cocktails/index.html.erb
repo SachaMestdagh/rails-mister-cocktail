@@ -1,0 +1,51 @@
+<p>
+  <span id="banner-typed-text"></span>
+</p>
+
+
+
+<!-- NAVBAR -->
+<div class= "navbar-themixologist">
+  <span class ="navbar-logo">
+  <%= image_tag 'logo.png', class: "themixologist-logo", alt: "themixologistlogo" %>
+  </span>
+  <span class ="navbar-btn">
+  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn"  %>
+  <%= link_to 'Select an Ingredient', new_cocktail_path, :class => "btn"  %>
+  <%= link_to 'The cocktail Roulette', new_cocktail_path, :class => "btn"  %>
+  </span>
+  <span id ="avatar">
+    <img src="https://source.unsplash.com/1600x900/?portrait" class="avatar">
+  </span>
+</div>
+
+<!-- CARDS -->
+<div id="card-countainer">
+<% @cocktails.each do |cocktail| %>
+  <div class="frame">
+        <div class="picture"><img src="https://source.unsplash.com/1600x900/?cocktail,<%=cocktail.name%>"></div>
+      <div class="namecockt">
+       <%= cocktail.name %>
+      </div>
+      <div class="social show">
+         <%= link_to '', cocktail_path(cocktail), :class => "fa fa-eye", :id => "i" %>
+        </a>
+      </div>
+
+      <div class="social edit">
+        <%= link_to '', edit_cocktail_path(cocktail), :class => "fa fa-edit", :id => "i" %>
+        </a>
+      </div>
+
+      <div class="social destroy">
+        <%= link_to '', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' }, :class => "fa fa-trash", :id => "i" %>
+        </a>
+      </div>
+    </div>
+<% end %>
+</div>
+
+
+<br>
+
+

@@ -1,12 +1,10 @@
-// SHOW
-.container {
-  width: 50px;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ .image-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
 }
+
 .img{
   height: 600px;
 }
@@ -16,6 +14,7 @@
   justify-content: space-around;
   th, td {
   border-bottom: 1px solid #ddd;
+  padding:0 30px 0 30px;
 }
 }
 
@@ -29,4 +28,20 @@
 }
 .btn-show:hover{
   border: solid 1px black;
+}
+
+#edit-icons {
+  text-color: #3a3a3a;
+  display:contents;
+  color:#3a3a3a;
+  margin:7px;
+  opacity:0.5;
+}
+
+#edit-icons:hover {
+  text-color: black;
+  display:contents;
+  color: black;
+  margin:7px;
+  opacity:1;
 }

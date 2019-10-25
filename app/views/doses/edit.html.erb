@@ -1,2 +1,29 @@
-<h1>Doses#edit</h1>
-<p>Find me in app/views/doses/edit.html.erb</p>
+
+<div class="card mx-auto" style="width: 18rem;">
+  <img src="https://source.unsplash.com/1600x900/?cocktail" class="card-img-top" alt="cocktail-img">
+  <div class="card-body">
+    <h5 class="card-title">Edit dose</h5>
+    <p class="card-text"><%= simple_form_for([@cocktail, @dose]) do |f| %>
+
+<% if @dose.errors.any? %>
+<div class="errors-container">
+  <ul>
+    <% @dose.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+
+  <div class="form-inputs">
+    <%= f.association :ingredient %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %></p>
+  </div>
+</div>

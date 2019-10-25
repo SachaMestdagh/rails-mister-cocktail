@@ -1,19 +1,21 @@
 <div class= "navbar-themixologist">
   <div class="nav-left">
-    <span class ="navbar-logo">
-    <%= image_tag 'logo.png', class: "themixologist-logo", alt: "themixologistlogo" %>
-    </span>
-    <span class ="navbar-btn">
-    <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn"  %>
-    <%= link_to 'Select an Ingredient', new_cocktail_path, :class => "btn"  %>
-    <%= link_to 'The cocktail Roulette', new_cocktail_path, :class => "btn"  %>
+      <span class ="navbar-logo">
+        <%= link_to cocktails_path(@cocktails) do %>
+          <%= image_tag 'logo.png', class: "themixologist-logo", alt: "themixologistlogo" %>
+        <% end %>
+      </span>
+  </div>
+  <div class="nav-middle">
+      <span class ="navbar-btn">
+      <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn"  %>
+      <%= link_to 'Select an Ingredient', new_cocktail_path, :class => "btn"  %>
+      <%= link_to 'The cocktail Roulette', new_cocktail_path, :class => "btn"  %>
+      </span>
   </div>
   <div class="nav-right">
     <%= link_to 'Login', new_cocktail_path, :class => "btn"  %>
     <span id ="avatar">
-      <%= image_tag 'avatar.jpeg', class: "avatar", alt: "themixologistlogo" %>
-    </span>
-    <%= link_to 'Sign up', new_cocktail_path, :class => "btn"  %>
-    </span>
+      <%= image_tag 'avatar.jpeg', class: "nav-avatar", alt: "themixologistlogo" %>
   </div>
 </div>

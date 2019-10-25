@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 
@@ -14,4 +15,14 @@
 
 .navbar-btn {
 justify-content: space-around;
+}
+
+.nav-avatar{
+  margin-right: 20px;
+  border: solid 1px #3a3a3a;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
 }

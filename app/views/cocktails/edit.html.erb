@@ -1,7 +1,8 @@
-<h1> Edit this cocktail </h1>
-
-<%= render 'form', cocktail: @cocktail %>
-
-<%= link_to 'Show', @cocktail, :class => "btn" %>
-<%= link_to 'Back', cocktails_path, :class => "btn" %>
-<%= link_to "Delete a cocktail", cocktail_path(@cocktail), method: :delete, :class => "btn"  %>
+<div class="card mx-auto" style="width: 18rem;">
+  <img src="https://source.unsplash.com/1600x900/?cocktail" class="card-img-top" alt="cocktail-img">
+  <div class="card-body">
+    <h5 class="card-title">Edit this cocktail</h5>
+    <p><small> Press update to change ingredients </small></p>
+    <p class="card-text"><%= render 'form', cocktails: @cocktails%></p>
+  </div>
+</div>

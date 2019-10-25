@@ -1,7 +1,9 @@
 
 <div class="container">
-     <img src="https://source.unsplash.com/1600x900/?cocktail,<%=@cocktail.name%>" class="img">
-    <h3> Here is what you need to do a <%= @cocktail.name %> ! </h3>
+    <div class="image-card">
+      <img src="https://source.unsplash.com/1600x900/?cocktail,<%=@cocktail.name%>" class="img">
+    </div>
+    <h3 class="row justify-content-center"> Here is what you need to do a <%= @cocktail.name %> ! </h3>
     <table align="center" class="tbl">
       <thead>
         <tr>
@@ -12,18 +14,27 @@
       <tbody>
       <% @cocktail.doses.each do |dose| %>
       <tr>
-        <td><%= link_to "edit", edit_cocktail_dose_path(@cocktail, dose) %></td>
         <td> <%= dose.ingredient.name %> </td>
         <td> <%= dose.description %> </td>
+        <td><%= link_to edit_dose_path(dose) do %>
+          <p class="fa fa-edit" id="edit-icons"></p>
+          <% end %>
+        </td>
+        <td><%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }  do %>
+          <p class="fa fa-trash" id="edit-icons"></p>
+          <% end %>
+        </td>
         </tr>
       <% end %>
     </tbody>
     </table>
   <br>
-    <h3>  Mix it up and enjoy! </h3>
+    <h3 class="row justify-content-center">  Mix it all  up and enjoy! </h3>
     <br>
+    <span class="row justify-content-center">
     <%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail), :class => "btn-show" %>
     <%= link_to "home", cocktails_path(@cocktails), :class => "btn-show" %>
+  </span>
     <br>
   </div>
 

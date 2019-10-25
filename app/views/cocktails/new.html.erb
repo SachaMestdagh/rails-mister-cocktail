@@ -1,7 +1,13 @@
-<h1>Add a new Cocktail</h1>
+
+<div class="card mx-auto" style="width: 18rem;">
+  <img src="https://source.unsplash.com/1600x900/?cocktail" class="card-img-top" alt="cocktail-img">
+  <div class="card-body">
+    <h5 class="card-title">Add a New Cocktail</h5>
+    <p class="card-text"><%= render 'form', cocktails: @cocktails%></p>
+  </div>
+</div>
 
 
-<%= render 'form', cocktails: @cocktails%>
 
 
 

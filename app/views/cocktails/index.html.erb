@@ -18,11 +18,16 @@
       </div>
 
       <div class="social edit">
-        <%= link_to 'Edit', edit_cocktail_path(cocktail), :class => "fa fa-edit", :id => "fa" %>
+        <%= link_to edit_cocktail_path(cocktail) do %>
+          <p class="fa fa-edit" id="fa"></p>
+        <% end %>
       </div>
 
       <div class="social destroy">
-        <%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' }, :class => "fa fa-trash", :id => "fa" %>
+        <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <p class="fa fa-trash" id="fa"></p>
+        <% end %>
+        <%#= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' }, :class => "fa fa-trash", :id => "fa" %>
       </div>
     </div>
 <% end %>

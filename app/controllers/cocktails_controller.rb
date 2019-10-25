@@ -18,6 +18,10 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def roulette
+    render :roulette
+  end
+
   def show
   end
 

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+root to: "cocktails#index"
 get 'cocktails', to: "cocktails#index"
+get 'cocktails/roulette', to: "cocktails#roulette"
 
   resources :cocktails do
     resources :doses, only: [:new, :create]

@@ -29,7 +29,7 @@ class DosesController < ApplicationController
 
   def update
     @dose.update(dose_params)
-    redirect_to review_path(@review)
+    redirect_to cocktail_path(@dose.cocktail)
   end
 
   def destroy

@@ -12,6 +12,7 @@
       <tbody>
       <% @cocktail.doses.each do |dose| %>
       <tr>
+        <%= link_to "edit", edit_dose_path(dose)  %>
         <td> <%= dose.ingredient.name %> </td>
         <td> <%= dose.description %> </td>
         </tr>

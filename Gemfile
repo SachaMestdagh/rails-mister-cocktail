@@ -31,6 +31,7 @@ gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
+gem 'seed_dump'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

@@ -2,25 +2,6 @@
   <span id="banner-typed-text"></span>
 </p>
 
-<!-- NAVBAR -->
-
-<!-- NAVBAR -->
-<div class= "navbar-themixologist">
-  <span class ="navbar-logo">
-  <%= image_tag 'logo.png', class: "themixologist-logo", alt: "themixologistlogo" %>
-  </span>
-  <span class ="navbar-btn">
-  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn"  %>
-  <%= link_to 'Select an Ingredient', new_cocktail_path, :class => "btn"  %>
-  <%= link_to 'The cocktail Roulette', new_cocktail_path, :class => "btn"  %>
-  <%= link_to 'Login', new_cocktail_path, :class => "btn"  %>
-  <span id ="avatar">
-    <%= image_tag 'avatar.jpeg', class: "avatar", alt: "themixologistlogo" %>
-  </span>
-  <%= link_to 'Sign up', new_cocktail_path, :class => "btn"  %>
-  </span>
-</div>
-
 <!-- CARDS -->
 <div id="card-countainer">
 <% @cocktails.each do |cocktail| %>

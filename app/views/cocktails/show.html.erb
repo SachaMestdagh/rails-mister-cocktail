@@ -1,8 +1,8 @@
 
 <div class="container">
-    <div class="picture"><img src="https://source.unsplash.com/1600x900/?cocktail,<%=@cocktail.name%>"*3></div>
-    <h1> Here is what you need to do a <%= @cocktail.name %> ! </h1>
-    <table>
+     <img src="https://source.unsplash.com/1600x900/?cocktail,<%=@cocktail.name%>" class="img">
+    <h3> Here is what you need to do a <%= @cocktail.name %> ! </h3>
+    <table align="center" class="tbl">
       <thead>
         <tr>
           <th>Ingredients</th>
@@ -18,9 +18,12 @@
       <% end %>
     </tbody>
     </table>
-
-    <h2>  Mix it up and enjoy! </h2>
+  <br>
+    <h3>  Mix it up and enjoy! </h3>
+    <br>
+    <%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail), :class => "btn-show" %>
+    <%= link_to "home", cocktails_path(@cocktails), :class => "btn-show" %>
+    <br>
   </div>
 
-<%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail), :class => "btn" %>
-<%= link_to "home", cocktails_path(@cocktails), :class => "btn" %>
+
